@@ -1,0 +1,23 @@
+{
+  "name": "vim",
+  "version": "0.1.0",
+  "description": "vim rc",
+  "main": "_vimrc",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adz5a/vim.git"
+  },
+  "keywords": [
+    "vimrc",
+    "helper"
+  ],
+  "author": "adz5a",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adz5a/vim/issues"
+  },
+  "homepage": "https://github.com/adz5a/vim#readme"
+}

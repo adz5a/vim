@@ -12,4 +12,4 @@ nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 set lines=999 columns=999
 vnoremap <C-c> "+y
-vnoremap <C-v> "+p
+nmap <C-v> "+p

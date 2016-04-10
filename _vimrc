@@ -1,7 +1,7 @@
 set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
 set guifont=Lucida_Console:h9:cANSI
-colorscheme darkblue
+colorscheme slate
 set backspace=indent,eol,start
 set number
 set clipboard=unnamed

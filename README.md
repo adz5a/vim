@@ -18,4 +18,5 @@ Useful commands I don't always remember...
 - search : /searchTerm or ?searchTerm
     - / -> search forward
     - ? -> search downward
-    - [n] continue searching in the same direction 
+    - [n] continue searching in the same direction
+    - [:noh] turn off highlightning until the next search 

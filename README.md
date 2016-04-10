@@ -15,3 +15,7 @@ Useful commands I don't always remember...
 - remove line : [D]
 - remove line from cursor : [C] -> {Insertion}
 - move to input start on the current line : [MAJ-i] -> {Insertion}
+- search : /searchTerm or ?searchTerm
+    - / -> search forward
+    - ? -> search downward
+    - [n] continue searching in the same direction 

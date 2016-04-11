@@ -13,3 +13,16 @@ nmap <silent> <A-Right> :wincmd l<CR>
 set lines=999 columns=999
 vnoremap <C-c> "+y
 nmap <C-v> "+p
+" shift+arrow selection
+nmap <A-Up> v<Up>
+nmap <A-Down> v<Down>
+nmap <A-Left> v<Left>
+nmap <A-Right> v<Right>
+vmap <A-Up> <Up>
+vmap <A-Down> <Down>
+vmap <A-Left> <Left>
+vmap <A-Right> <Right>
+imap <A-Up> <Esc>v<Up>
+imap <A-Down> <Esc>v<Down>
+imap <A-Left> <Esc>v<Left>
+imap <A-Right> <Esc>v<Right>

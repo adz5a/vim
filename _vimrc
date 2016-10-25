@@ -6,10 +6,10 @@ set backspace=indent,eol,start
 set number
 set clipboard=unnamed
 syntax on
-nmap <silent> <A-Up> :wincmd k<CR>
-nmap <silent> <A-Down> :wincmd j<CR>
-nmap <silent> <A-Left> :wincmd h<CR>
-nmap <silent> <A-Right> :wincmd l<CR>
+nmap <silent> <C-Up> :wincmd k<CR>
+nmap <silent> <C-Down> :wincmd j<CR>
+nmap <silent> <C-Left> :wincmd h<CR>
+nmap <silent> <C-Right> :wincmd l<CR>
 set lines=999 columns=999
 vnoremap <C-c> "+y
 nmap <C-v> "+p

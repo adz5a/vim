@@ -1,6 +1,6 @@
 set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
-set guifont=Lucida_Console:h9:cANSI
+set guifont=Lucida_Console:h12:cANSI
 colorscheme slate
 set backspace=indent,eol,start
 set number

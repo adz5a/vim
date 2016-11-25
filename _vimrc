@@ -1,6 +1,6 @@
 set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
-set guifont=Lucida_Console:h12:cANSI
+set guifont=Consolas:h12:cANSI
 colorscheme slate
 set backspace=indent,eol,start
 set number
@@ -30,3 +30,6 @@ imap <A-Right> <Esc>v<Right>
 
 
 set noswapfile
+set textwidth=0
+set nowrap
+set wrapmargin=0

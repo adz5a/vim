@@ -1,6 +1,7 @@
+set autoindent
 set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
-set guifont=Consolas:h12:cANSI
+set guifont=Consolas:h11:cANSI
 colorscheme slate
 set backspace=indent,eol,start
 set number

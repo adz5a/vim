@@ -1,4 +1,5 @@
 set autoindent
+set hlsearch
 set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
 set guifont=Consolas:h11:cANSI

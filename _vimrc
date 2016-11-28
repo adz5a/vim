@@ -1,3 +1,6 @@
+filetype on
+filetype plugin on
+filetype indent on
 set autoindent
 set hlsearch
 set tabstop=4 shiftwidth=4 expandtab

@@ -5,7 +5,10 @@ set autoindent
 set hlsearch
 set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
-set guifont=Monospace\ 10
+"Windows font
+set guifont=Consolas:h11
+"Linux font
+"set guifont=Monospace\ 10
 colorscheme slate
 set backspace=indent,eol,start
 set number

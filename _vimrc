@@ -6,15 +6,14 @@ set hlsearch
 set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
 "Windows font
-set guifont=Consolas:h11
+"set guifont=Consolas:h11
 "Linux font
-"set guifont=Monospace\ 10
+set guifont=Monospace\ 10
 colorscheme slate
 set backspace=indent,eol,start
 set number
 set clipboard=unnamed
 syntax on
-set lines=999 columns=999
 vnoremap <C-c> "+y
 nmap <C-v> "+p
 set noswapfile

@@ -16,7 +16,10 @@ set clipboard=unnamed
 syntax on
 vnoremap <C-c> "+y
 nmap <C-v> "+p
-set noswapfile
+
+
+"does not create .swp file
+set noswapfile 
 set textwidth=0
 set nowrap
 set wrapmargin=0
@@ -24,7 +27,10 @@ vnoremap <Up> k
 vnoremap <Down> j
 vnoremap <Left> h
 vnoremap <Right> l
-nmap <silent> <C-Up> :wincmd k<CR>
-nmap <silent> <C-Down> :wincmd j<CR>
-nmap <silent> <C-Left> :wincmd h<CR>
-nmap <silent> <C-Right> :wincmd l<CR>
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+nnoremap <silent> <C-a> G$vgg
+
+execute pathogen#infect()

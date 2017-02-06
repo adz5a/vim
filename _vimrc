@@ -34,3 +34,4 @@ nmap <silent> <A-Right> :wincmd l<CR>
 nnoremap <silent> <C-a> G$vgg
 
 execute pathogen#infect()
+let g:javascript_plugin_jsdoc = 1

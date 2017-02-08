@@ -2,6 +2,20 @@
 
 This repository contains the vimr I use at work/home.
 
+### Installation
+
+```
+    ln -s /path/to/bundle ~/.vim/bundle
+```
+
+This repository includes several vim plugins as git submodules.
+The installation is done with pathogen which should be installed 
+manually in your machine.
+
+To add the plugins you just have to create a symbolink link between
+your ./vim/bundle directory and this repo ./bundle and pull the submodules
+contents from github.
+
 ### Mapping
 Mapping introduced by my vimrc
 - copy/paste : [CTRL-c]:[CTRL-v]

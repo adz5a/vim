@@ -23,16 +23,17 @@ set noswapfile
 set textwidth=0
 set nowrap
 set wrapmargin=0
-nmap <Up> k
-nmap <Down> j
-nmap <Left> h
-nmap <Right> l
-nmap <silent> <A-Up> :wincmd k<CR>
-nmap <silent> <A-Down> :wincmd j<CR>
-nmap <silent> <A-Left> :wincmd h<CR>
-nmap <silent> <A-Right> :wincmd l<CR>
+map <Up> <NOP>
+map <Down> <NOP>
+map <Left> <NOP>
+map <Right> <NOP>
+imap <Up> <NOP>
+imap <Down> <NOP>
+imap <Left> <NOP>
+imap <Right> <NOP>
 nnoremap <silent> <C-a> G$vgg
 
 execute pathogen#infect()
 execute pathogen#helptags()
 let g:javascript_plugin_jsdoc = 1
+set laststatus=2

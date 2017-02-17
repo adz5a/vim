@@ -37,3 +37,4 @@ execute pathogen#infect()
 execute pathogen#helptags()
 let g:javascript_plugin_jsdoc = 1
 set laststatus=2
+let g:jsx_ext_required = 0

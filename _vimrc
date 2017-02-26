@@ -40,3 +40,4 @@ set laststatus=2
 let g:jsx_ext_required = 0
 
 :hi Comment	term=bold ctermfg=LightBlue
+set linespace=10

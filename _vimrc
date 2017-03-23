@@ -8,7 +8,7 @@ set encoding=utf-8
 "Windows font
 "set guifont=Consolas:h11
 "Linux font
-set guifont=Monospace\ 10
+set guifont=Monospace\ 13
 colorscheme slate
 set backspace=indent,eol,start
 set number

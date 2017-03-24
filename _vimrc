@@ -17,6 +17,8 @@ syntax on
 vnoremap <C-c> "+y
 nmap <C-v> "+p
 
+"enhance vim responsiveness when pressing ESC
+set timeoutlen=1000 ttimeoutlen=0
 
 "does not create .swp file
 set noswapfile 

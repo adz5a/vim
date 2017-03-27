@@ -43,3 +43,7 @@ let g:jsx_ext_required = 0
 
 :hi Comment	term=bold ctermfg=LightBlue
 set linespace=10
+
+"removes the netrws header when using
+":Explore commands
+let g:netrw_banner=0

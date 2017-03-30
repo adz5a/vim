@@ -8,7 +8,7 @@ set encoding=utf-8
 "Windows font
 "set guifont=Consolas:h11
 "Linux font
-set guifont=Monospace\ 13
+set guifont=Monospace\ 11
 colorscheme slate
 set backspace=indent,eol,start
 set number
@@ -51,3 +51,7 @@ set linespace=10
 "removes the netrws header when using
 ":Explore commands
 let g:netrw_banner=0
+
+"puts the mouse in command line mode
+"effectively disabling it
+set mouse=c

@@ -33,6 +33,8 @@ imap <Up> <NOP>
 imap <Down> <NOP>
 imap <Left> <NOP>
 imap <Right> <NOP>
+imap <C-m> <ESC>o<ESC>O<ESC>o
+nmap <C-m> <ESC>o<ESC>O<ESC>o
 nnoremap <silent> <C-a> G$vgg
 
 execute pathogen#infect()

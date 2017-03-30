@@ -33,9 +33,11 @@ imap <Up> <NOP>
 imap <Down> <NOP>
 imap <Left> <NOP>
 imap <Right> <NOP>
-imap <C-m> <ESC>o<ESC>O<ESC>o
-nmap <C-m> <ESC>o<ESC>O<ESC>o
+inoremap <C-j> <ESC>o<ESC>O
+nnoremap <C-j> <ESC>o<ESC>O
 nnoremap <silent> <C-a> G$vgg
+
+
 
 execute pathogen#infect()
 execute pathogen#helptags()

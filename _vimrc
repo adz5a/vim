@@ -33,8 +33,8 @@ imap <Up> <NOP>
 imap <Down> <NOP>
 imap <Left> <NOP>
 imap <Right> <NOP>
-inoremap <C-j> <ESC>o<ESC>O
-nnoremap <C-j> <ESC>o<ESC>O
+inoremap <C-j> <ESC>O<ESC>o<ESC>O
+nnoremap <C-j> <ESC>O<ESC>o<ESC>O
 nnoremap <silent> <C-a> G$vgg
 
 

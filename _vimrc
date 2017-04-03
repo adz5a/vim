@@ -33,8 +33,17 @@ imap <Up> <NOP>
 imap <Down> <NOP>
 imap <Left> <NOP>
 imap <Right> <NOP>
+
+"on cursor, creates a line below and upside
 inoremap <C-j> <ESC>O<ESC>o<ESC>O
 nnoremap <C-j> <ESC>O<ESC>o<ESC>O
+
+"on cursor, add a CR and creates a line, 
+"used when creating objects / arrays
+nnoremap <C-k> i<CR><ESC>O
+inoremap <C-k> <CR><ESC>O
+
+"select all file
 nnoremap <silent> <C-a> G$vgg
 
 

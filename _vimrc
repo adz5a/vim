@@ -25,6 +25,9 @@ set noswapfile
 set textwidth=0
 set nowrap
 set wrapmargin=0
+
+"disables direction keys 
+"in normal and insertion modes
 map <Up> <NOP>
 map <Down> <NOP>
 map <Left> <NOP>

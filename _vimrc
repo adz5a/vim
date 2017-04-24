@@ -1,7 +1,34 @@
-filetype on
-filetype plugin on
-filetype indent on
-set autoindent
+"""PLUGIN CONFIGURATION
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'mxw/vim-jsx'
+Plugin 'tpope/vim-commentary'
+Plugin 'pangloss/vim-javascript'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'jason0x43/vim-js-indent'
+
+call vundle#end()
+filetype plugin indent on
+
+let g:javascript_plugin_jsdoc = 1
+set laststatus=2
+let g:jsx_ext_required = 0
+
+"""END PLUGIN CONFIGURATION
+
+
+"GENERAL EDITOR CONFIG
 set hlsearch
 set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
@@ -12,8 +39,10 @@ set guifont=Monospace\ 11
 colorscheme slate
 set backspace=indent,eol,start
 set number
-set clipboard=unnamed
 syntax on
+
+"CLIPBOARD
+set clipboard=unnamed
 vnoremap <C-c> "+y
 nmap <C-v> "+p
 
@@ -37,14 +66,18 @@ imap <Down> <NOP>
 imap <Left> <NOP>
 imap <Right> <NOP>
 
+"Mapping for moving around splits
+noremap <M-j> <C-w>j
+noremap <M-k> <C-w>k
+noremap <M-l> <C-w>l
+noremap <M-h> <C-w>h
+
 "on cursor, creates a line below and upside
-inoremap <C-j> <CR><ESC>O<ESC>o<ESC>O
-nnoremap <C-j> i<CR><ESC>O<ESC>o<ESC>O
+nnoremap <M-j> i<CR><ESC>O<ESC>o<ESC>O
 
 "on cursor, add a CR and creates a line, 
 "used when creating objects / arrays
-nnoremap <C-k> i<CR><ESC>O
-inoremap <C-k> <CR><ESC>O
+nnoremap <M-k> i<CR><ESC>O
 
 "select all file
 nnoremap <silent> <C-a> G$vgg
@@ -53,11 +86,6 @@ nnoremap <silent> <C-a> G$vgg
 nnoremap <C-f> viBzf
 
 
-execute pathogen#infect()
-execute pathogen#helptags()
-let g:javascript_plugin_jsdoc = 1
-set laststatus=2
-let g:jsx_ext_required = 0
 
 :hi Comment	term=bold ctermfg=LightBlue
 set linespace=10
@@ -69,3 +97,5 @@ let g:netrw_banner=0
 "puts the mouse in command line mode
 "effectively disabling it
 set mouse=c
+
+set pastetoggle=<F2>

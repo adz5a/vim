@@ -1,3 +1,10 @@
+"COLOR CONFIGURATION
+
+" if $COLORTERM = "gnome-terminal"
+"     set t_Co=256
+" endif
+
+
 """PLUGIN CONFIGURATION
 set nocompatible
 filetype off
@@ -43,8 +50,8 @@ syntax on
 
 "CLIPBOARD
 set clipboard=unnamed
-vnoremap <C-c> "+y
-nmap <C-v> "+p
+vnoremap <M-c> "+y
+nmap <M-v> "+p
 
 "enhance vim responsiveness when pressing ESC
 set timeoutlen=1000 ttimeoutlen=0
@@ -73,11 +80,14 @@ noremap <M-l> <C-w>l
 noremap <M-h> <C-w>h
 
 "on cursor, creates a line below and upside
-nnoremap <M-j> i<CR><ESC>O<ESC>o<ESC>O
+nnoremap <C-j> i<CR><ESC>O<ESC>o<ESC>O
 
 "on cursor, add a CR and creates a line, 
 "used when creating objects / arrays
-nnoremap <M-k> i<CR><ESC>O
+nnoremap <C-k> i<CR><ESC>O
+
+"select code block and reformat it
+nnoremap <C-=> viB=
 
 "select all file
 nnoremap <silent> <C-a> G$vgg

@@ -64,20 +64,16 @@ set wrapmargin=0
 
 "disables direction keys 
 "in normal and insertion modes
-map <Up> <NOP>
-map <Down> <NOP>
-map <Left> <NOP>
-map <Right> <NOP>
 imap <Up> <NOP>
 imap <Down> <NOP>
 imap <Left> <NOP>
 imap <Right> <NOP>
 
-"Mapping for moving around splits
-noremap <M-j> <C-w>j
-noremap <M-k> <C-w>k
-noremap <M-l> <C-w>l
-noremap <M-h> <C-w>h
+"mapping for resizing splits
+map <Left> :vertical resize -5<CR>
+map <Up> :resize +5<CR>
+map <Right> :vertical resize +5<CR>
+map <Down> :resize -5<CR>
 
 "on cursor, creates a line below and upside
 nnoremap <C-j> i<CR><ESC>O<ESC>o<ESC>O
@@ -87,7 +83,7 @@ nnoremap <C-j> i<CR><ESC>O<ESC>o<ESC>O
 nnoremap <C-k> i<CR><ESC>O
 
 "select code block and reformat it
-nnoremap <C-=> viB=
+nnoremap <C>= viB=
 
 "select all file
 nnoremap <silent> <C-a> G$vgg

@@ -1,8 +1,8 @@
 "COLOR CONFIGURATION
 
-" if $COLORTERM = "gnome-terminal"
-"     set t_Co=256
-" endif
+if $COLORTERM == "gnome-terminal"
+    set t_Co=256
+endif
 
 
 """PLUGIN CONFIGURATION
@@ -86,13 +86,17 @@ nnoremap <C-j> i<CR><ESC>O<ESC>o<ESC>O
 nnoremap <C-k> i<CR><ESC>O
 
 "select code block and reformat it
-nnoremap <C-h> viB=
+nnoremap <C-h> viB=<ESC>
 
 "select all file
 nnoremap <silent> <C-a> G$vgg
 
 "fold block (between curly braces)
 nnoremap <C-f> viBzf
+
+"remove trailing spaces 
+"for the current line
+nmap <silent> <C-l> :s/\s*$//g<CR>:noh<CR>
 
 
 " Comment formatting
@@ -104,9 +108,22 @@ set linespace=10
 "removes the netrws header when using
 ":Explore commands
 let g:netrw_banner=0
+let g:netrw_liststyle=3
 
 "puts the mouse in command line mode
 "effectively disabling it
 set mouse=c
 
 set pastetoggle=<F2>
+
+"open vimgrep in quickfix list
+"http://stackoverflow.com/questions/39009792/vimgrep-pattern-and-immediately-open-quickfix-in-split-mode
+
+augroup myvimrc
+    autocmd!
+    autocmd QuickFixCmdPost [^l]* cwindow
+    autocmd QuickFixCmdPost l* cwindow
+augroup END
+
+"yank till the end of line
+map Y y$

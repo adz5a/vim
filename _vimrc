@@ -58,7 +58,10 @@ set timeoutlen=1000 ttimeoutlen=0
 
 "does not create .swp file
 set noswapfile 
-set textwidth=0
+
+"general text formatting
+set textwidth=80
+set colorcolumn=+2
 set nowrap
 set wrapmargin=0
 
@@ -83,7 +86,7 @@ nnoremap <C-j> i<CR><ESC>O<ESC>o<ESC>O
 nnoremap <C-k> i<CR><ESC>O
 
 "select code block and reformat it
-nnoremap <C>= viB=
+nnoremap <C-h> viB=
 
 "select all file
 nnoremap <silent> <C-a> G$vgg

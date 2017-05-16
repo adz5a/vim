@@ -66,7 +66,7 @@ set nowrap
 set wrapmargin=0
 
 "disables direction keys 
-"in normal and insertion modes
+"in insertion modes
 imap <Up> <NOP>
 imap <Down> <NOP>
 imap <Left> <NOP>
@@ -95,8 +95,10 @@ nnoremap <silent> <C-a> G$vgg
 nnoremap <C-f> viBzf
 
 
+" Comment formatting
+:hi Comment	term=bold ctermfg=LightGreen
 
-:hi Comment	term=bold ctermfg=LightBlue
+" for GUI
 set linespace=10
 
 "removes the netrws header when using

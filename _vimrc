@@ -1,3 +1,7 @@
+"PATH CONFIGURATION
+
+set path=$PWD/**
+
 "COLOR CONFIGURATION
 
 if $COLORTERM == "gnome-terminal"

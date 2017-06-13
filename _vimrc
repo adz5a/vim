@@ -51,6 +51,7 @@ colorscheme slate
 set backspace=indent,eol,start
 set number
 syntax on
+set cursorline
 
 "CLIPBOARD
 set clipboard=unnamed

@@ -101,7 +101,7 @@ nnoremap <C-f> viBzf
 
 "remove trailing spaces 
 "for the current line
-nmap <silent> <C-l> :s/\s*$//g<CR>:noh<CR>
+nmap <silent> <C-l> :%s/\s*$/<CR>:noh<CR>
 
 
 " Comment formatting

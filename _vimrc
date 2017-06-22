@@ -94,7 +94,7 @@ nnoremap <C-k> i<CR><ESC>O
 nnoremap <C-h> viB=<ESC>
 
 "select all file
-nnoremap <silent> <C-a> G$vgg
+nnoremap <S-a> G$vgg
 
 "fold block (between curly braces)
 nnoremap <C-f> viBzf

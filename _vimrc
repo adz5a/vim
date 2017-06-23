@@ -49,7 +49,11 @@ set encoding=utf-8
 set guifont=Monospace\ 11
 colorscheme slate
 set backspace=indent,eol,start
+"shows line number and the
+"up / down offset
 set number
+set relativenumber
+
 syntax on
 set cursorline
 
@@ -62,7 +66,7 @@ nmap <M-v> "+p
 set timeoutlen=1000 ttimeoutlen=0
 
 "does not create .swp file
-set noswapfile 
+set noswapfile
 
 "general text formatting
 set textwidth=80
@@ -70,7 +74,15 @@ set colorcolumn=+2
 set nowrap
 set wrapmargin=0
 
-"disables direction keys 
+
+"see tabs/spaces/eol
+set list
+set listchars=tab:▲\ ,eol:¬
+set listchars=tab:␉·
+
+
+
+"disables direction keys
 "in insertion modes
 imap <Up> <NOP>
 imap <Down> <NOP>
@@ -86,7 +98,7 @@ map <Down> :resize -5<CR>
 "on cursor, creates a line below and upside
 nnoremap <C-j> i<CR><ESC>O<ESC>o<ESC>O
 
-"on cursor, add a CR and creates a line, 
+"on cursor, add a CR and creates a line,
 "used when creating objects / arrays
 nnoremap <C-k> i<CR><ESC>O
 
@@ -96,7 +108,7 @@ nnoremap <C-h> viB=<ESC>
 "fold block (between curly braces)
 nnoremap <C-f> viBzf
 
-"remove trailing spaces 
+"remove trailing spaces
 "for the current line
 nmap <silent> <C-l> :%s/\s*$/<CR>:noh<CR><C-o>
 
@@ -104,7 +116,7 @@ nmap <silent> <C-l> :%s/\s*$/<CR>:noh<CR><C-o>
 " Comment formatting
 :hi Comment	term=bold ctermfg=LightGreen
 
-" for GUI
+" for GUI line height
 set linespace=10
 
 "removes the netrws header when using

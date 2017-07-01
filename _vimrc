@@ -4,9 +4,7 @@ set path=$PWD/**
 
 "COLOR CONFIGURATION
 
-if $COLORTERM == "gnome-terminal"
-    set t_Co=256
-endif
+set t_Co=256
 
 
 """PLUGIN CONFIGURATION
@@ -31,6 +29,12 @@ Plugin 'jason0x43/vim-js-indent'
 
 call vundle#end()
 filetype plugin indent on
+
+"airline configuration"
+let g:airline_theme = "solarized"
+let g:airline#extenstions#tabline#enabled = 1
+
+
 
 let g:javascript_plugin_jsdoc = 1
 set laststatus=2

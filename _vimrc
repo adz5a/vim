@@ -107,7 +107,7 @@ nnoremap <C-j> i<CR><ESC>O<ESC>o<ESC>O
 nnoremap <C-k> i<CR><ESC>O
 
 "select code block and reformat it
-nnoremap <C-h> viB=<ESC>
+nnoremap <C-h> viB=<ESC><C-o>
 
 "fold block (between curly braces)
 nnoremap <C-f> viBzf

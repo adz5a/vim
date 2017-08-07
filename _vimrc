@@ -80,9 +80,7 @@ set wrapmargin=0
 
 
 "see tabs/spaces/eol
-set list
-set listchars=tab:▲\ ,eol:¬
-set listchars=tab:␉·
+set listchars=nbsp:☠,tab:▲\ ,eol:¬
 
 
 

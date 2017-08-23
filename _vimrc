@@ -26,6 +26,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'pangloss/vim-javascript'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'jason0x43/vim-js-indent'
+Plugin 'matze/vim-move'
 
 call vundle#end()
 filetype plugin indent on
@@ -35,6 +36,8 @@ let g:airline_theme = "solarized"
 let g:airline#extenstions#tabline#enabled = 1
 
 
+"vim-move configuration
+let g:move_key_modifier = "C"
 
 let g:javascript_plugin_jsdoc = 1
 set laststatus=2
@@ -98,21 +101,21 @@ map <Right> :vertical resize +5<CR>
 map <Down> :resize -5<CR>
 
 "on cursor, creates a line below and upside
-nnoremap <C-j> i<CR><ESC>O<ESC>o<ESC>O
+nnoremap <C-c>O i<CR><ESC>O<ESC>o<ESC>O
 
 "on cursor, add a CR and creates a line,
 "used when creating objects / arrays
-nnoremap <C-k> i<CR><ESC>O
+nnoremap <C-c>o i<CR><ESC>O
 
 "select code block and reformat it
-nnoremap <C-h> viB=<ESC><C-o>
+nnoremap <C-c>h viB=<ESC><C-o>
 
 "fold block (between curly braces)
-nnoremap <C-f> viBzf
+nnoremap <C-c>f viBzf
 
 "remove trailing spaces
 "for the current line
-nmap <silent> <C-l> :%s/\s*$/<CR>:%s/\%u00a0/ /g<CR>:noh<CR><C-o>
+nmap <silent> <C-c>l :%s/\s*$/<CR>:%s/\%u00a0/ /g<CR>:noh<CR><C-o>
 
 
 " Comment formatting

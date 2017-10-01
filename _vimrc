@@ -32,7 +32,7 @@ call vundle#end()
 filetype plugin indent on
 
 "airline configuration"
-let g:airline_theme = "solarized"
+let g:airline_theme = "luna"
 let g:airline#extenstions#tabline#enabled = 1
 
 
@@ -109,6 +109,10 @@ nnoremap <C-c>o i<CR><ESC>O
 
 "select code block and reformat it
 nnoremap <C-c>h viB=<ESC><C-o>
+
+"reformat
+nnoremap <C-c>= =i}
+nnoremap <C-c>== gg=G
 
 "fold block (between curly braces)
 nnoremap <C-c>f viBzf

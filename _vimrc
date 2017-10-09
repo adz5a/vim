@@ -9,27 +9,12 @@ set t_Co=256
 
 """PLUGIN CONFIGURATION
 set nocompatible
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+execute pathogen#infect()
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mxw/vim-jsx'
-Plugin 'tpope/vim-commentary'
-Plugin 'pangloss/vim-javascript'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'jason0x43/vim-js-indent'
-Plugin 'matze/vim-move'
-
-call vundle#end()
+syntax on
 filetype plugin indent on
+set cursorline
 
 "airline configuration"
 let g:airline_theme = "luna"
@@ -61,8 +46,6 @@ set backspace=indent,eol,start
 set number
 set relativenumber
 
-syntax on
-set cursorline
 
 "CLIPBOARD
 set clipboard=unnamed

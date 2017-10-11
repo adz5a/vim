@@ -33,7 +33,7 @@ let g:jsx_ext_required = 0
 
 "GENERAL EDITOR CONFIG
 set hlsearch
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=2 shiftwidth=2 expandtab
 set encoding=utf-8
 "Windows font
 "set guifont=Consolas:h11
@@ -47,10 +47,6 @@ set number
 set relativenumber
 
 
-"CLIPBOARD
-set clipboard=unnamed
-vnoremap <M-c> "+y
-nmap <M-v> "+p
 
 "enhance vim responsiveness when pressing ESC
 set timeoutlen=1000 ttimeoutlen=0

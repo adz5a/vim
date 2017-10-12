@@ -16,9 +16,6 @@ syntax on
 filetype plugin indent on
 set cursorline
 
-"airline configuration"
-let g:airline_theme = "luna"
-let g:airline#extenstions#tabline#enabled = 1
 
 
 "vim-move configuration
@@ -39,7 +36,7 @@ set encoding=utf-8
 "set guifont=Consolas:h11
 "Linux font
 set guifont=Monospace\ 11
-colorscheme slate
+colorscheme nova
 set backspace=indent,eol,start
 "shows line number and the
 "up / down offset

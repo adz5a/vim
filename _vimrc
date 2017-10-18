@@ -42,6 +42,7 @@ set backspace=indent,eol,start
 "up / down offset
 set number
 set relativenumber
+set scrolloff=0
 
 
 
@@ -83,11 +84,21 @@ nnoremap <C-c>O i<CR><ESC>O<ESC>o<ESC>O
 "used when creating objects / arrays
 nnoremap <C-c>o i<CR><ESC>O
 
-"select code block and reformat it
-nnoremap <C-c>h viB=<ESC><C-o>
+nnoremap <C-c>s :call ToggleScrollOffset()<CR>
+
+function! ToggleScrollOffset()
+  let scroll = &scrolloff "& means the value of the option
+  if scroll > 10
+    set scrolloff=0
+  else
+    set scrolloff=1000
+  endif
+endfunction
+
 
 "reformat
 nnoremap <C-c>= =i}
+nmap <C-c>h <C-c>=
 nnoremap <C-c>== gg=G
 
 "fold block (between curly braces)
@@ -123,6 +134,3 @@ augroup myvimrc
     autocmd QuickFixCmdPost [^l]* cwindow
     autocmd QuickFixCmdPost l* cwindow
 augroup END
-
-"yank till the end of line
-map Y y$

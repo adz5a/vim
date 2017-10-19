@@ -87,14 +87,19 @@ nnoremap <C-c>o i<CR><ESC>O
 nnoremap <C-c>s :call ToggleScrollOffset()<CR>
 
 function! ToggleScrollOffset()
-  let scroll = &scrolloff "& means the value of the option
-  if scroll > 10
+  if &scrolloff > 10
     set scrolloff=0
   else
-    set scrolloff=1000
+    set scrolloff=500
   endif
 endfunction
 
+
+nnoremap <C-c>e :call EchoFunction()<CR>
+
+function! EchoFunction ()
+  echo &scrolloff
+endfunction
 
 "reformat
 nnoremap <C-c>= =i}

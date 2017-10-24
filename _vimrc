@@ -1,6 +1,7 @@
 "PATH CONFIGURATION
 
 set path=$PWD/**
+set wildignore+=**/node_modules/** "plz don't :find inside the node_modules
 
 "COLOR CONFIGURATION
 

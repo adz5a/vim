@@ -22,7 +22,7 @@ set cursorline
 "vim-move configuration
 let g:move_key_modifier = "C"
 
-let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_jsdoc = 1 "vim-javascript enable JSDOC highlightning
 set laststatus=2
 let g:jsx_ext_required = 0
 
@@ -31,7 +31,7 @@ let g:jsx_ext_required = 0
 
 "GENERAL EDITOR CONFIG
 set hlsearch
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
 "Windows font
 "set guifont=Consolas:h11

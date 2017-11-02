@@ -59,11 +59,37 @@ set colorcolumn=+2
 set nowrap
 set wrapmargin=0
 
+" Comment formatting
+:hi Comment	term=bold ctermfg=LightGreen
+
+" for GUI line height
+set linespace=10
+
+"removes the netrws header when using
+":Explore commands
+let g:netrw_banner=0
+let g:netrw_liststyle=3
+
+"puts the mouse in command line mode
+"effectively disabling it
+set mouse=c
+
+set pastetoggle=<F2>
+
+"open vimgrep in quickfix list
+"http://stackoverflow.com/questions/39009792/vimgrep-pattern-and-immediately-open-quickfix-in-split-mode
+
+augroup myvimrc
+    autocmd!
+    autocmd QuickFixCmdPost [^l]* cwindow
+    autocmd QuickFixCmdPost l* cwindow
+augroup END
 
 "see tabs/spaces/eol
 set listchars=nbsp:☠,tab:▲\ ,eol:¬
 
 
+" MAPPINGS
 
 "disables direction keys
 "in insertion modes
@@ -96,16 +122,15 @@ function! ToggleScrollOffset()
 endfunction
 
 
-nnoremap <C-c>e :call EchoFunction()<CR>
-
-function! EchoFunction ()
-  echo &scrolloff
-endfunction
-
 "reformat
+"current block
 nnoremap <C-c>= =i}
 nmap <C-c>h <C-c>=
+"whole file
 nnoremap <C-c>== gg=G
+
+"copy
+nnoremap <C-c>w yiw
 
 "fold block (between curly braces)
 nnoremap <C-c>f viBzf
@@ -115,28 +140,4 @@ nnoremap <C-c>f viBzf
 nmap <silent> <C-c>l :%s/\s*$/<CR>:%s/\%u00a0/ /g<CR>:noh<CR><C-o>
 
 
-" Comment formatting
-:hi Comment	term=bold ctermfg=LightGreen
-
-" for GUI line height
-set linespace=10
-
-"removes the netrws header when using
-":Explore commands
-let g:netrw_banner=0
-let g:netrw_liststyle=3
-
-"puts the mouse in command line mode
-"effectively disabling it
-set mouse=c
-
-set pastetoggle=<F2>
-
-"open vimgrep in quickfix list
-"http://stackoverflow.com/questions/39009792/vimgrep-pattern-and-immediately-open-quickfix-in-split-mode
-
-augroup myvimrc
-    autocmd!
-    autocmd QuickFixCmdPost [^l]* cwindow
-    autocmd QuickFixCmdPost l* cwindow
-augroup END
+" END MAPPINGS

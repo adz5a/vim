@@ -36,7 +36,7 @@ set encoding=utf-8
 "Windows font
 "set guifont=Consolas:h11
 "Linux font
-set guifont=Monospace\ 11
+set guifont=Monospace\ 9
 colorscheme nova
 set backspace=indent,eol,start
 "shows line number and the
@@ -138,6 +138,10 @@ nnoremap <C-c>f viBzf
 "remove trailing spaces
 "for the current line
 nmap <silent> <C-c>l :%s/\s*$/<CR>:%s/\%u00a0/ /g<CR>:noh<CR><C-o>
+
+"go to start of current block
+noremap <silent> <C-c>b ?{<CR>:noh<CR>
+noremap <silent> <C-c>B ?{<CR>:noh<CR>%
 
 
 " END MAPPINGS

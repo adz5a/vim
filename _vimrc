@@ -133,15 +133,22 @@ nnoremap <C-c>== gg=G
 nnoremap <C-c>w yiw
 
 "fold block (between curly braces)
-nnoremap <C-c>f viBzf
+nnoremap <C-c>f zfi}
 
 "remove trailing spaces
 "for the current line
 nmap <silent> <C-c>l :%s/\s*$/<CR>:%s/\%u00a0/ /g<CR>:noh<CR><C-o>
 
+"http://vim.wikia.com/wiki/Jumping_to_the_start_and_end_of_a_code_block
 "go to start of current block
-noremap <silent> <C-c>b ?{<CR>:noh<CR>
-noremap <silent> <C-c>B ?{<CR>:noh<CR>%
+noremap <C-c>b [{
+noremap <C-c>B [{%
 
+"go to start of parenthesis
+noremap <silent> <C-c>p [(<ESC>%
+noremap <silent> <C-c>P )]<ESC>
 
+noremap <silent> <C-c>s :Sex<CR>
+noremap <silent> <C-c>v :Vex<CR>
+noremap <silent> <C-c>e :Ex<CR>
 " END MAPPINGS

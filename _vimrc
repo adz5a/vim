@@ -112,7 +112,7 @@ nnoremap <C-c>O i<CR><ESC>O<ESC>o<ESC>O
 "used when creating objects / arrays
 nnoremap <C-c>o i<CR><ESC>O
 
-nnoremap <C-c>s :call ToggleScrollOffset()<CR>
+nnoremap <C-c>r :call ToggleScrollOffset()<CR>
 
 function! ToggleScrollOffset()
   if &scrolloff > 10
@@ -123,11 +123,8 @@ function! ToggleScrollOffset()
 endfunction
 
 
-"reformat
-"current block
+"reformat current block & whole file
 nnoremap <C-c>= =i}
-nmap <C-c>h <C-c>=
-"whole file
 nnoremap <C-c>== gg=G
 
 "copy

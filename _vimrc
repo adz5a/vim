@@ -20,6 +20,7 @@ set cursorline
 
 
 "vim-move configuration
+"this allows to use <C-j> | <C-k> to move lines down / up
 let g:move_key_modifier = "C"
 
 let g:javascript_plugin_jsdoc = 1 "vim-javascript enable JSDOC highlightning

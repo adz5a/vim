@@ -149,4 +149,13 @@ noremap <silent> <C-c>P )]<ESC>
 noremap <silent> <C-c>s :Sex<CR>
 noremap <silent> <C-c>v :Vex<CR>
 noremap <silent> <C-c>e :Ex<CR>
+
+"tabs
+"put current buffer into its own tab 
+noremap <silent> <C-c>t :tab split<CR> 
+"put all current buffers into their own tabs
+noremap <silent> <C-c>T :tab ball<CR> 
+"navigate tabs
+noremap <silent> <C-c>l :tabnext<CR> 
+noremap <silent> <C-c>h :tabprevious<CR> 
 " END MAPPINGS

@@ -135,7 +135,7 @@ nnoremap <C-c>f zfi}
 
 "remove trailing spaces
 "for the current line
-nmap <silent> <C-c>l :%s/\s*$/<CR>:%s/\%u00a0/ /g<CR>:noh<CR><C-o>
+nmap <silent> <C-c>m :%s/\s*$/<CR>:%s/\%u00a0/ /g<CR>:noh<CR><C-o>
 
 "http://vim.wikia.com/wiki/Jumping_to_the_start_and_end_of_a_code_block
 "go to start of current block
@@ -151,11 +151,14 @@ noremap <silent> <C-c>v :Vex<CR>
 noremap <silent> <C-c>e :Ex<CR>
 
 "tabs
-"put current buffer into its own tab 
-noremap <silent> <C-c>t :tab split<CR> 
-"put all current buffers into their own tabs
-noremap <silent> <C-c>T :tab ball<CR> 
-"navigate tabs
-noremap <silent> <C-c>l :tabnext<CR> 
-noremap <silent> <C-c>h :tabprevious<CR> 
+"put current buffer into its own tab
+noremap <silent> <C-c>t :tab split<CR>
+"close current tab (does not close buffers)
+noremap <silent> <C-c>T :tabclose<CR>
+"creates a new tab
+noremap <silent> <C-c>n :tabnew<CR>
+
+"GO FUGITIVE
+noremap <C-c>d :Gvdiff<CR>
+noremap <C-c>a :Gwrite<CR>
 " END MAPPINGS

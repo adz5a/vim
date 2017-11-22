@@ -156,9 +156,10 @@ noremap <silent> <C-c>t :tab split<CR>
 "close current tab (does not close buffers)
 noremap <silent> <C-c>T :tabclose<CR>
 "creates a new tab
-noremap <silent> <C-c>n :tabnew<CR>
+noremap <silent> <C-c>n :tabnew<CR>:Ex<CR>
 
 "GO FUGITIVE
 noremap <C-c>d :Gvdiff<CR>
 noremap <C-c>a :Gwrite<CR>
+cnoremap Glast<CR> :Glog -1 --
 " END MAPPINGS

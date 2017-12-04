@@ -92,6 +92,7 @@ set listchars=nbsp:☠,tab:▲\ ,eol:¬
 
 " MAPPINGS
 
+let mapleader=" "
 "disables direction keys
 "in insertion modes
 imap <Up> <NOP>
@@ -106,13 +107,13 @@ map <Right> :vertical resize +5<CR>
 map <Down> :resize -5<CR>
 
 "on cursor, creates a line below and upside
-nnoremap <C-c>O i<CR><ESC>O<ESC>o<ESC>O
+nnoremap <Leader>O i<CR><ESC>O<ESC>o<ESC>O
 
 "on cursor, add a CR and creates a line,
 "used when creating objects / arrays
-nnoremap <C-c>o i<CR><ESC>O
+nnoremap <Leader>o i<CR><ESC>O
 
-nnoremap <C-c>r :call ToggleScrollOffset()<CR>
+nnoremap <Leader>r :call ToggleScrollOffset()<CR>
 
 function! ToggleScrollOffset()
   if &scrolloff > 10
@@ -124,42 +125,42 @@ endfunction
 
 
 "reformat current block & whole file
-nnoremap <C-c>= =i}
-nnoremap <C-c>== gg=G
+nnoremap <Leader>= =i}
+nnoremap <Leader>== gg=G
 
 "copy
-nnoremap <C-c>w yiw
+nnoremap <Leader>w yiw
 
 "fold block (between curly braces)
-nnoremap <C-c>f zfi}
+nnoremap <Leader>f zfi}
 
 "remove trailing spaces
 "for the current line
-nmap <silent> <C-c>m :%s/\s*$/<CR>:%s/\%u00a0/ /g<CR>:noh<CR><C-o>
+nmap <silent> <Leader>m :%s/\s*$/<CR>:%s/\%u00a0/ /g<CR>:noh<CR><C-o>
 
 "http://vim.wikia.com/wiki/Jumping_to_the_start_and_end_of_a_code_block
 "go to start of current block
-noremap <C-c>b [{
-noremap <C-c>B [{%
+noremap <Leader>b [{
+noremap <Leader>B [{%
 
 "go to start of parenthesis
-noremap <silent> <C-c>p [(<ESC>%
-noremap <silent> <C-c>P )]<ESC>
+noremap <silent> <Leader>p [(<ESC>%
+noremap <silent> <Leader>P )]<ESC>
 
-noremap <silent> <C-c>s :Sex<CR>
-noremap <silent> <C-c>v :Vex<CR>
-noremap <silent> <C-c>e :Ex<CR>
+noremap <silent> <Leader>s :Sex<CR>
+noremap <silent> <Leader>v :Vex<CR>
+noremap <silent> <Leader>e :Ex<CR>
 
 "tabs
 "put current buffer into its own tab
-noremap <silent> <C-c>t :tab split<CR>
+noremap <silent> <Leader>t :tab split<CR>
 "close current tab (does not close buffers)
-noremap <silent> <C-c>T :tabclose<CR>
+noremap <silent> <Leader>T :tabclose<CR>
 "creates a new tab
-noremap <silent> <C-c>n :tabnew<CR>:Ex<CR>
+noremap <silent> <Leader>n :tabnew<CR>:Ex<CR>
 
 "GO FUGITIVE
-noremap <C-c>d :Gvdiff<CR>
-noremap <C-c>a :Gwrite<CR>
+noremap <Leader>d :Gvdiff<CR>
+noremap <Leader>a :Gwrite<CR>
 cnoremap Glast<CR> :Glog -1 --
 " END MAPPINGS

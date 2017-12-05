@@ -147,7 +147,6 @@ noremap <Leader>B [{%
 noremap <silent> <Leader>p [(<ESC>%
 noremap <silent> <Leader>P )]<ESC>
 
-noremap <silent> <Leader>s :Sex<CR>
 noremap <silent> <Leader>v :Vex<CR>
 noremap <silent> <Leader>e :Ex<CR>
 
@@ -162,5 +161,6 @@ noremap <silent> <Leader>n :tabnew<CR>:Ex<CR>
 "GO FUGITIVE
 noremap <Leader>d :Gvdiff<CR>
 noremap <Leader>a :Gwrite<CR>
-cnoremap Glast<CR> :Glog -1 --
+noremap <Leader>s :Gstatus<CR>
+noremap <Leader>S :tabnew<CR>:Gstatus<CR>
 " END MAPPINGS

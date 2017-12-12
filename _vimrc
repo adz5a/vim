@@ -154,9 +154,13 @@ noremap <silent> <Leader>e :Ex<CR>
 "put current buffer into its own tab
 noremap <silent> <Leader>t :tab split<CR>
 "close current tab (does not close buffers)
-noremap <silent> <Leader>T :tabclose<CR>
+noremap <silent> <Leader>tq :tabclose<CR>
 "creates a new tab
 noremap <silent> <Leader>n :tabnew<CR>:Ex<CR>
+"exit
+noremap <silent> <Leader>q :q<CR>
+"%
+noremap <silent> <Leader>ù %
 
 "GO FUGITIVE
 noremap <Leader>d :Gvdiff<CR>

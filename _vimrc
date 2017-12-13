@@ -167,4 +167,6 @@ noremap <Leader>d :Gvdiff<CR>
 noremap <Leader>a :Gwrite<CR>
 noremap <Leader>s :Gstatus<CR>
 noremap <Leader>S :tabnew<CR>:Gstatus<CR>
+
+:command Standup Glog -1 --
 " END MAPPINGS

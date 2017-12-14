@@ -31,6 +31,3 @@
 [submodule "bundle/vim-rhubarb"]
 	path = bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
-[submodule "source"]
-	path = source
-	url = https://github.com/vim/vim.git

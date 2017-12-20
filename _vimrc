@@ -51,6 +51,7 @@ set scrolloff=0
 set laststatus=2                             " always show statusbar
 set statusline=
 set statusline+=%-10.3n\                     " buffer number
+set statusline+=%{fugitive#statusline()}     " current git status
 set statusline+=%f\                          " filename
 set statusline+=%h%m%r%w                     " status flags
 set statusline+=%=                           " right align remainder

@@ -62,5 +62,9 @@ function makevim () {
 }
 
 function compilevim () {
-    echo "lol"    
+    clean &&
+        install &&
+        clone &&
+        configure &&
+        makevim 
 }

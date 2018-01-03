@@ -162,6 +162,9 @@ noremap <silent> <Leader>P )]<ESC>
 noremap <silent> <Leader>v :Vex<CR>
 noremap <silent> <Leader>e :Ex<CR>
 
+"Yank
+noremap <silent> Y y$
+
 "tabs
 "put current buffer into its own tab
 noremap <silent> <Leader>t :tab split<CR>

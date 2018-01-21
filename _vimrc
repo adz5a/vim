@@ -2,6 +2,9 @@
 
 set path=$PWD/**
 set wildignore+=**/node_modules/** "plz don't :find inside the node_modules
+set wildignore+=**/out/**
+set wildignore+=**/dist/**
+set wildignore+=**/build/**
 
 "COLOR CONFIGURATION
 

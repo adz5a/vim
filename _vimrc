@@ -121,6 +121,12 @@ map <Up> :resize +5<CR>
 map <Right> :vertical resize +5<CR>
 map <Down> :resize -5<CR>
 
+"mapping to move around splits
+map <Leader>j <C-w>j
+map <Leader>k <C-w>k
+map <Leader>l <C-w>l
+map <Leader>h <C-w>h
+
 "on cursor, creates a line below and upside
 nnoremap <Leader>O i<CR><ESC>O<ESC>o<ESC>O
 

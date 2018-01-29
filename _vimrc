@@ -192,5 +192,7 @@ noremap <Leader>a :Gwrite<CR>
 noremap <Leader>s :Gstatus<CR>
 noremap <Leader>S :tabnew<CR>:Gstatus<CR>
 
+"Commands
 :command Standup Glog -1 --
+:command Q qa
 " END MAPPINGS

@@ -188,6 +188,7 @@ noremap <silent> <Leader>ù %
 
 "GO FUGITIVE
 noremap <Leader>d :Gvdiff<CR>
+noremap <Leader>D :Gvdiff HEAD<CR>
 noremap <Leader>a :Gwrite<CR>
 noremap <Leader>s :Gstatus<CR>
 noremap <Leader>S :tabnew<CR>:Gstatus<CR>

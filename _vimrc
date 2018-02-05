@@ -202,12 +202,10 @@ noremap <Leader>S :tabnew<CR>:Gstatus<CR>
 " find files and populate the quickfix list
 fun! FindFiles(filename)
     let error_file = tempname()
-    silent! exe '!find . -name "'.a:filename.'" | xargs file | sed "s/:/:1:/" > '.error_file
+    silent! exe '!find . -not \( -path "'. join(split(&wildignore, ","), '" -o -path "') .'" \)| grep "'.a:filename.'" | xargs file | sed "s/:/:1:/" > '.error_file
     set errorformat=%f:%l:%m
     exe "cfile ". error_file
     copen
-    call delete(error_file)
     redraw!
 endfun
-command! -nargs=1 FindFile call FindFiles(<q-args>)
-command! -nargs=1 F call FindFiles(<q-args>)
+command! -nargs=1 Find call FindFiles(<q-args>)

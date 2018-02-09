@@ -182,6 +182,8 @@ noremap <silent> <Leader>t :tab split<CR>
 noremap <silent> <Leader>tq :tabclose<CR>
 "creates a new tab
 noremap <silent> <Leader>n :tabnew<CR>:Ex<CR>
+noremap <silent> <Leader>L :tabnext<CR>
+noremap <silent> <Leader>H :tabprevious<CR>
 "exit
 noremap <silent> <Leader>q :q<CR>
 "%

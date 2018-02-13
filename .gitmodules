@@ -34,6 +34,3 @@
 [submodule "bundle/vim-signify"]
 	path = bundle/vim-signify
 	url = https://github.com/mhinz/vim-signify.git
-[submodule "bundle/php.vim"]
-	path = bundle/php.vim
-	url = https://github.com/StanAngeloff/php.vim.git

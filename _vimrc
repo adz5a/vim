@@ -1,27 +1,8 @@
-"PATH CONFIGURATION
-
-set path=$PWD/**
-set wildignore+=**/node_modules/** "plz don't :find inside the node_modules
-set wildignore+=**/out/**
-set wildignore+=**/dist/**
-set wildignore+=**/build/**
-set wildignore+=**/.git/**
-
-"COLOR CONFIGURATION
-
-set t_Co=256
-
-
-"""PLUGIN CONFIGURATION
+"Load plugins
 set nocompatible
-
 execute pathogen#infect()
-
 syntax on
 filetype plugin indent on
-set cursorline
-
-
 
 "vim-move configuration
 "this allows to use <C-j> | <C-k> to move lines down / up
@@ -31,21 +12,21 @@ let g:javascript_plugin_jsdoc = 1 "vim-javascript enable JSDOC highlightning
 set laststatus=2
 let g:jsx_ext_required = 0
 
-"""END PLUGIN CONFIGURATION
-
+"PATH CONFIGURATION
+set path=$PWD/**
+set wildignore+=**/node_modules/** "plz don't :find inside the node_modules
+set wildignore+=**/out/**
+set wildignore+=**/dist/**
+set wildignore+=**/build/**
+set wildignore+=**/.git/**
 
 "GENERAL EDITOR CONFIG
+set t_Co=256
+set cursorline
 set hlsearch
 set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
-"Windows font
-"set guifont=Consolas:h11
-"Linux font
-set guifont=Monospace\ 9
 colorscheme nova
-set backspace=indent,eol,start
-"shows line number and the
-"up / down offset
 set number
 set relativenumber
 set scrolloff=0
@@ -63,7 +44,6 @@ set statusline+=0x%-8B                       " character value
 set statusline+=%-14(%l,%c%V%)               " line, character
 set statusline+=%<%P                         " file position
 
-
 "enhance vim responsiveness when pressing ESC
 set timeoutlen=500 ttimeoutlen=0
 
@@ -72,9 +52,7 @@ set noswapfile
 
 "general text formatting
 set textwidth=80
-set colorcolumn=+2
 set nowrap
-set wrapmargin=0
 
 " Comment formatting
 :hi Comment	term=bold ctermfg=LightGreen
@@ -87,8 +65,7 @@ set linespace=10
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 
-"puts the mouse in command line mode
-"effectively disabling it
+"puts the mouse in command line mode effectively disabling it
 set mouse=c
 
 set pastetoggle=<F2>
@@ -102,8 +79,12 @@ augroup myvimrc
     autocmd QuickFixCmdPost l* cwindow
 augroup END
 
-"see tabs/spaces/eol
+"see overwrite vim-sensible defaults
 set listchars=nbsp:☠,tab:▲\ ,eol:¬
+
+
+""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""
 
 
 " MAPPINGS

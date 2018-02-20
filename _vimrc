@@ -193,3 +193,10 @@ fun! FindFiles(filename)
     redraw!
 endfun
 command! -nargs=1 Find call FindFiles(<q-args>)
+
+" Remove autocmd when using grep to speed things up
+fun! FastGrep (...)
+    exe "noautocmd vim /" . a:1 . "/ " . a:2
+    exe "e"
+endfun
+command! -nargs=* Vim call FastGrep(<f-args>)

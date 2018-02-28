@@ -109,6 +109,10 @@ map <Leader>k <C-w>k
 map <Leader>l <C-w>l
 map <Leader>h <C-w>h
 
+"remap gf to work without using the path option
+"<cfile> is the filename under the cursor
+map gf :e <cfile><CR>
+
 "on cursor, creates a line below and upside
 nnoremap <Leader>O i<CR><ESC>O<ESC>o<ESC>O
 

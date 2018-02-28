@@ -162,9 +162,13 @@ noremap <silent> <Leader>t :tab split<CR>
 "close current tab (does not close buffers)
 noremap <silent> <Leader>tq :tabclose<CR>
 "creates a new tab
-noremap <silent> <Leader>n :tabnew<CR>:Ex<CR>
+noremap <silent> <Leader>n :Texplore<CR>
 noremap <silent> <Leader>L :tabnext<CR>
 noremap <silent> <Leader>H :tabprevious<CR>
+"navigate quickfix list
+noremap <silent> <Leader>K :cprev<CR>
+noremap <silent> <Leader>J :cnext<CR>
+
 "exit
 noremap <silent> <Leader>q :q<CR>
 "%

@@ -26,7 +26,7 @@ set cursorline
 set hlsearch
 set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
-colorscheme nova
+colorscheme heman
 set number
 set relativenumber
 set scrolloff=0
@@ -143,7 +143,7 @@ nnoremap <Leader>f zfi}
 
 "remove trailing spaces
 "for the current line
-nmap <silent> <Leader>m :%s/\s*$/<CR>:%s/\%u00a0/ /g<CR>:noh<CR><C-o>
+noremap <silent> <Leader>m :%s/\s*$/<CR>:%s/\%u00a0/ /g<CR>:noh<CR><C-o>
 
 "http://vim.wikia.com/wiki/Jumping_to_the_start_and_end_of_a_code_block
 "go to start of current block
@@ -174,7 +174,7 @@ noremap <silent> <Leader>K :cprev<CR>
 noremap <silent> <Leader>J :cnext<CR>
 
 "exit
-noremap <silent> <Leader>q :q<CR>
+noremap <silent> <Leader>Q :q<CR>
 "%
 noremap <silent> <Leader>ù %
 
@@ -185,9 +185,12 @@ noremap <Leader>a :Gwrite<CR>
 noremap <Leader>s :Gstatus<CR>
 noremap <Leader>S :tabnew<CR>:Gstatus<CR>
 
+"Toggle listchar
+noremap <Leader>c :set list<CR>
+noremap <Leader>C :set nolist<CR>
+
 "Commands
 :command Standup Glog -1 --
-:command Q qa
 " END MAPPINGS
 
 

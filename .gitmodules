@@ -37,3 +37,15 @@
 [submodule "bundle/vim-sensible"]
 	path = bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
+[submodule "bundle/vim-fethoi"]
+	path = bundle/vim-fethoi
+	url = https://github.com/theJian/vim-fethoi.git
+[submodule "bund"]
+	path = bund
+	url = https://github.com/Alvarocz/vim-fresh.git
+[submodule "bundle/vim-fresh"]
+	path = bundle/vim-fresh
+	url = https://github.com/Alvarocz/vim-fresh.git
+[submodule "bundle/heman"]
+	path = bundle/heman
+	url = https://github.com/devnul1/heman.git

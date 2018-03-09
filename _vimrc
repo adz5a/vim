@@ -155,6 +155,7 @@ noremap <silent> <Leader>p [(<ESC>%
 noremap <silent> <Leader>P )]<ESC>
 
 noremap <silent> <Leader>v :Vex<CR>
+noremap <silent> <Leader>V :vs<CR>
 noremap <silent> <Leader>e :Ex<CR>
 
 "Yank
@@ -173,8 +174,6 @@ noremap <silent> <Leader>H :tabprevious<CR>
 noremap <silent> <Leader>K :cprev<CR>
 noremap <silent> <Leader>J :cnext<CR>
 
-"exit
-noremap <silent> <Leader>Q :q<CR>
 "%
 noremap <silent> <Leader>ù %
 

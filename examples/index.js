@@ -7,6 +7,7 @@
             const yolo = "lol";
 
             // yolo    
+          console.log("hello world");
 
         }
 

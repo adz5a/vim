@@ -174,6 +174,11 @@ noremap <silent> <Leader>H :tabprevious<CR>
 noremap <silent> <Leader>K :cprev<CR>
 noremap <silent> <Leader>J :cnext<CR>
 
+"open command list
+noremap <silent> <Leader>q q:
+noremap <silent> <Leader>q? q?
+noremap <silent> <Leader>q/ q/
+
 "%
 noremap <silent> <Leader>ù %
 
@@ -192,6 +197,30 @@ noremap <Leader>C :set nolist<CR>
 :command Standup Glog -1 --
 " END MAPPINGS
 
+function! GetSearchPath (...)
+    let l:mappings = [ "php", "js", "vim", "css" ]
+    let current_filetype = &filetype
+    let l:default_result = "**/*." . current_filetype
+    let l:extension = a:1
+
+    for ft in l:mappings
+        " case insensitive equality comparison
+        if l:extension ==? ft
+            return "**/*." . ft
+        endif
+    endfor
+
+    return default_result
+endfunction
+
+" Remove autocmd when using grep to speed things up
+fun! FastGrep (...)
+    let l:searchpath = GetSearchPath(a:2)
+    exe "noautocmd vim /" . a:1 . "/ " . l:searchpath
+    exe "e"
+    exe "copen"
+endfun
+command! -nargs=* Vim call FastGrep(<f-args>)
 
 " find files and populate the quickfix list
 fun! FindFiles(filename)
@@ -203,10 +232,3 @@ fun! FindFiles(filename)
     redraw!
 endfun
 command! -nargs=1 Find call FindFiles(<q-args>)
-
-" Remove autocmd when using grep to speed things up
-fun! FastGrep (...)
-    exe "noautocmd vim /" . a:1 . "/ " . a:2
-    exe "e"
-endfun
-command! -nargs=* Vim call FastGrep(<f-args>)

@@ -26,7 +26,7 @@ set cursorline
 set hlsearch
 set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
-colorscheme heman
+colorscheme darkblue
 set number
 set relativenumber
 set scrolloff=0
@@ -43,6 +43,8 @@ set statusline+=%=                           " right align remainder
 set statusline+=0x%-8B                       " character value
 set statusline+=%-14(%l,%c%V%)               " line, character
 set statusline+=%<%P                         " file position
+" display status line with red font
+hi StatusLine ctermfg=1                      
 
 "enhance vim responsiveness when pressing ESC
 set timeoutlen=500 ttimeoutlen=0

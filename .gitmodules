@@ -46,9 +46,6 @@
 [submodule "bundle/vim-fresh"]
 	path = bundle/vim-fresh
 	url = https://github.com/Alvarocz/vim-fresh.git
-[submodule "bundle/heman"]
-	path = bundle/heman
-	url = https://github.com/devnul1/heman.git
 [submodule "bundle/rainbow_parentheses.vim"]
 	path = bundle/rainbow_parentheses.vim
 	url = https://github.com/kien/rainbow_parentheses.vim

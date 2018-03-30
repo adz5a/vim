@@ -43,8 +43,16 @@ set statusline+=%=                           " right align remainder
 set statusline+=0x%-8B                       " character value
 set statusline+=%-14(%l,%c%V%)               " line, character
 set statusline+=%<%P                         " file position
-" display status line with red font
-hi StatusLine ctermfg=1                      
+
+fun! RefreshStatusLineColor (...)
+    " display status line with red font
+    if a:0 == 1
+        exe "StatusLine ctermfg=". a:1
+    else
+        hi StatusLine ctermfg=1                      
+    endif
+endfun
+call RefreshStatusLineColor()
 
 "enhance vim responsiveness when pressing ESC
 set timeoutlen=500 ttimeoutlen=0
@@ -56,8 +64,6 @@ set noswapfile
 set textwidth=80
 set nowrap
 
-" Comment formatting
-:hi Comment	term=bold ctermfg=LightGreen
 
 " for GUI line height
 set linespace=10
@@ -196,7 +202,7 @@ noremap <Leader>c :set list<CR>
 noremap <Leader>C :set nolist<CR>
 
 "Commands
-:command Standup Glog -1 --
+:command! Standup Glog -1 --
 " END MAPPINGS
 
 " Remove autocmd when using grep to speed things up
@@ -240,3 +246,12 @@ fun! FindFiles(filename)
     redraw!
 endfun
 command! -nargs=1 Find call FindFiles(<q-args>)
+
+" Wrapper around Glog
+" This Command is provided by vim-fugitive which
+" should be installed
+fun! GitShow(hash)
+    exe "Glog " . hash . "~..." . hash " --"
+endfun
+
+command! -nargs=1 Gshow call GitShow(<q-args>)

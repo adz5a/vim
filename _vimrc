@@ -9,7 +9,6 @@ filetype plugin indent on
 let g:move_key_modifier = "C"
 
 let g:javascript_plugin_jsdoc = 1 "vim-javascript enable JSDOC highlightning
-set laststatus=2
 let g:jsx_ext_required = 0
 
 "PATH CONFIGURATION
@@ -26,7 +25,7 @@ set cursorline
 set hlsearch
 set tabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
-colorscheme darkblue
+colorscheme ron
 set number
 set relativenumber
 set scrolloff=0
@@ -44,15 +43,16 @@ set statusline+=0x%-8B                       " character value
 set statusline+=%-14(%l,%c%V%)               " line, character
 set statusline+=%<%P                         " file position
 
-fun! RefreshStatusLineColor (...)
+fun! RefreshStatusLineColor (color)
     " display status line with red font
-    if a:0 == 1
-        exe "StatusLine ctermfg=". a:1
+    if a:color ==# ""
+        exe "StatusLine ctermfg=". a:color
     else
         hi StatusLine ctermfg=1                      
     endif
 endfun
-call RefreshStatusLineColor()
+call RefreshStatusLineColor(1)
+command! -nargs=* RefreshStatusLine call RefreshStatusLineColor(<q-args>)
 
 "enhance vim responsiveness when pressing ESC
 set timeoutlen=500 ttimeoutlen=0
@@ -251,7 +251,7 @@ command! -nargs=1 Find call FindFiles(<q-args>)
 " This Command is provided by vim-fugitive which
 " should be installed
 fun! GitShow(hash)
-    exe "Glog " . hash . "~..." . hash " --"
+    exe "Glog " . a:hash . "~..." . a:hash . " --"
 endfun
 
 command! -nargs=1 Gshow call GitShow(<q-args>)

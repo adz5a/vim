@@ -21,3 +21,7 @@ install: symlink
 
 workspace:
 	tmux new-session -s $(SESSION) -n main
+
+# to completetly remove a git submodule from this repository
+# remove:
+# 	rm -rf ./.git/modules/[module-name]

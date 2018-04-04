@@ -70,8 +70,9 @@ set linespace=10
 
 "removes the netrws header when using
 ":Explore commands
-let g:netrw_banner=0
-let g:netrw_liststyle=3
+" Disabled for the moment as vim-vinegar is handling netrw for me
+" let g:netrw_banner=0
+" let g:netrw_liststyle=3
 
 "puts the mouse in command line mode effectively disabling it
 set mouse=c

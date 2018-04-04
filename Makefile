@@ -1,9 +1,14 @@
 SESSION=vimconfig
 
-.PHONY=workspace
 
-workspace:
-	tmux new-session -s $(SESSION) -n main
+all:install-modules
+
+install-modules:
+	git submodule sync && git submodule update
+
+update:
+	git submodule update
+
 
 symlink:
 	mkdir -p $(HOME)/.vim
@@ -12,8 +17,7 @@ symlink:
 	ln -s $(PWD)/bundle $(HOME)/.vim/bundle
 	ln -s $(PWD)/ftplugin $(HOME)/.vim/ftplugin
 
+install: symlink
 
-install-modules:
-	git submodule sync && git submodule update
-
-install: insall-modules symlink
+workspace:
+	tmux new-session -s $(SESSION) -n main

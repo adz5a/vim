@@ -19,6 +19,13 @@ symlink:
 
 install: symlink
 
+# remove current vimrc and all symlinks possibly created
+uninstall:
+	rm $(HOME)/_vimrc
+	rm -rf $(HOME)/.vim/bundle
+	rm -rf $(HOME)/.vim/ftplugin
+	rm -rf $(HOME)/.vim/autoload
+
 workspace:
 	tmux new-session -s $(SESSION) -n main
 

@@ -256,3 +256,11 @@ fun! GitShow(hash)
 endfun
 
 command! -nargs=1 Gshow call GitShow(<q-args>)
+
+function! GitSince (ref)
+
+    exe "Git! ls " . a:ref . "...HEAD"
+
+endfunction
+" called with 1 quoted arg
+command! -nargs=1 Gsince call GitSince(<q-args>)

@@ -263,8 +263,17 @@ command! -nargs=1 Gshow call GitShow(<q-args>)
 
 function! GitSince (ref)
 
-    exe "Git! ls " . a:ref . "..HEAD"
+    exe "Git! ls " . a:ref . "...HEAD"
 
 endfunction
 " called with 1 quoted arg
 command! -nargs=1 Gsince call GitSince(<q-args>)
+
+" display the "context" around a given pattern in the current
+" file using :global and :z# command
+function! ListContext (pattern)
+    " will display five lines centered around the matched line
+    " separated by ==============
+    exe "global/" . a:pattern . "/z#.5 | echo \"===============\""
+endfunction
+command! -nargs=1 Context call ListContext(<q-args>)

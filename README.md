@@ -2,39 +2,22 @@
 
 ### Compile Vim from source
 
-You will be asked to enter your password by the various scripts
-```bash
-git submodule init && git submodule update
-sudo apt-get update
+You will find in `compile.sh` some functions with the commands to compile vim
+from source. Tested on Ubuntu. 
 
-# removes useless packages
-source clean.sh 
-
-# install libs
-source install.sh
-
-# config vim
-source configure.sh
-
-# config vim
-source make.sh
-```
 
 ### Install plugins and utils
 
+All plugins are loaded using `pathogen` and managed using git submodules.
+
 ```
-git submodule init && git submodule update
-ln -s ~/.vim/autoload ./vim-pathogen/autoload # loads pathogen
-ln -s ~/.vim/bundle ./vim-pathogen/bundle # loads plugins
+make && make install
 ```
 
+Add a new plugin using git:
 
-### Tips
+```
+git submodule add <repo_url> bundle/plugin-name
+```
 
-**Display chars**
-
-`:set list`
-`:set nolist`
-
-This will display whitespace according to the options specified in the
-`listchar` option.
+Plugins need to be cloned inside the `bundle` to be loaded.

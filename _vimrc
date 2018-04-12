@@ -86,7 +86,11 @@ augroup myvimrc
     autocmd!
     autocmd QuickFixCmdPost [^l]* cwindow
     autocmd QuickFixCmdPost l* cwindow
+    "set sql syntax color for dbout files. used by vim-dadbod
+    autocmd BufNewFile,BufRead *.dbout set filetype=sql
 augroup END
+
+
 
 "see overwrite vim-sensible defaults
 set listchars=nbsp:☠,tab:▲\ ,eol:¬
@@ -176,7 +180,7 @@ noremap <silent> <Leader>t :tab split<CR>
 "close current tab (does not close buffers)
 noremap <silent> <Leader>tq :tabclose<CR>
 "creates a new tab
-noremap <silent> <Leader>n :Texplore<CR>
+noremap <silent> <Leader>n :tabnew<CR>:Ex<CR>
 noremap <silent> <Leader>L :tabnext<CR>
 noremap <silent> <Leader>H :tabprevious<CR>
 "navigate quickfix list

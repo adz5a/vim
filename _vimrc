@@ -263,7 +263,7 @@ command! -nargs=1 Gshow call GitShow(<q-args>)
 
 function! GitSince (ref)
 
-    exe "Git! ls " . a:ref . "...HEAD"
+    exe "Git! ls " . a:ref . "..HEAD"
 
 endfunction
 " called with 1 quoted arg

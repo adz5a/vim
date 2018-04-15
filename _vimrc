@@ -29,6 +29,8 @@ colorscheme ron
 set number
 set relativenumber
 set scrolloff=0
+set showcmd " displays current command in operator pending mode
+            " this could slow down vim
 
 " Statusline
 " https://stackoverflow.com/questions/5547943/display-number-of-current-buffer

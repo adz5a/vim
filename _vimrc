@@ -31,6 +31,8 @@ set relativenumber
 set scrolloff=0
 set showcmd " displays current command in operator pending mode
             " this could slow down vim
+set virtualedit="block" " allow to position the cursor anywhere
+                        " in visual block mode
 
 " Statusline
 " https://stackoverflow.com/questions/5547943/display-number-of-current-buffer
@@ -45,16 +47,12 @@ set statusline+=0x%-8B                       " character value
 set statusline+=%-14(%l,%c%V%)               " line, character
 set statusline+=%<%P                         " file position
 
-fun! RefreshStatusLineColor (color)
+fun! RefreshStatusLineColor ()
     " display status line with red font
-    if a:color ==# ""
-        exe "StatusLine ctermfg=". a:color
-    else
-        hi StatusLine ctermfg=1                      
-    endif
+    hi StatusLine ctermfg=1                      
 endfun
-call RefreshStatusLineColor(1)
-command! -nargs=* RefreshStatusLine call RefreshStatusLineColor(<q-args>)
+call RefreshStatusLineColor()
+command! RefreshStatusLine call RefreshStatusLineColor()
 
 "enhance vim responsiveness when pressing ESC
 set timeoutlen=500 ttimeoutlen=0
@@ -260,12 +258,11 @@ command! -nargs=1 Find call FindFiles(<q-args>)
 fun! GitShow(hash)
     exe "Glog " . a:hash . "~..." . a:hash . " --"
 endfun
-
 command! -nargs=1 Gshow call GitShow(<q-args>)
 
 function! GitSince (ref)
 
-    exe "Git! ls " . a:ref . "...HEAD"
+    exe "Git! ls " . a:ref . "..HEAD"
 
 endfunction
 " called with 1 quoted arg

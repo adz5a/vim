@@ -270,9 +270,21 @@ command! -nargs=1 Gsince call GitSince(<q-args>)
 
 " display the "context" around a given pattern in the current
 " file using :global and :z# command
-function! ListContext (pattern)
+function! ListContext (...)
     " will display five lines centered around the matched line
     " separated by ==============
-    exe "global/" . a:pattern . "/z#.5 | echo \"===============\""
+    let fieldview = 5 "number of lines printed per match, use an odd number to have it centered
+    let pattern = a:000
+
+    let last_item = pattern[-1]
+
+    " if last arg is a number, use it a fieldview
+    " and slice the pattern array
+    if and(len(pattern) > 1, last_item =~ '^\d\+$')
+        let fieldview = last_item 
+        let pattern = pattern[:-2]
+    endif
+
+    exe "global/" . join(pattern, " ") . "/z#.". fieldview ." | echo \"===============\""
 endfunction
-command! -nargs=1 Context call ListContext(<q-args>)
+command! -nargs=+ Context call ListContext(<f-args>)

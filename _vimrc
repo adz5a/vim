@@ -17,7 +17,8 @@ set wildignore+=**/node_modules/** "plz don't :find inside the node_modules
 set wildignore+=**/out/**
 set wildignore+=**/dist/**
 set wildignore+=**/build/**
-set wildignore+=**/.git/**
+
+set tags+=./.git/tags
 
 "GENERAL EDITOR CONFIG
 set t_Co=256
@@ -94,7 +95,7 @@ augroup END
 
 "see overwrite vim-sensible defaults
 set listchars=nbsp:☠,tab:▲\ ,eol:¬
-
+set list
 
 """"""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""

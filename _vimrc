@@ -201,7 +201,6 @@ noremap <silent> <Leader>ù %
 "GO FUGITIVE
 noremap <Leader>d :Gvdiff<CR>
 noremap <Leader>D :Gvdiff HEAD<CR>
-noremap <Leader>a :Gwrite<CR>
 noremap <Leader>s :Gstatus<CR>
 noremap <Leader>S :tabnew<CR>:Gstatus<CR>
 
@@ -291,3 +290,11 @@ function! ListContext (...)
     exe "global/" . join(pattern, " ") . "/z#.". fieldview ." | echo \"===============\""
 endfunction
 command! -nargs=+ Context call ListContext(<f-args>)
+
+" Will select the tags for the symbol under the cursor
+function! SelectTags ()
+    let l:current_word = expand("<cword>")
+    exe "tselect " . l:current_word
+endfunction
+
+nnoremap <Leader>a :call SelectTags() <CR>

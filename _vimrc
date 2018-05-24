@@ -298,3 +298,10 @@ function! SelectTags ()
 endfunction
 
 nnoremap <Leader>a :call SelectTags() <CR>
+
+function! GitBranch (...)
+
+    exe "Git! branch " . join(a:000, " ")
+
+endfunction
+command! -nargs=1 Gbranch call GitBranch(<f-args>)

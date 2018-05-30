@@ -34,12 +34,6 @@
 [submodule "bundle/vim-sensible"]
 	path = bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
-[submodule "bundle/vim-fethoi"]
-	path = bundle/vim-fethoi
-	url = https://github.com/theJian/vim-fethoi.git
-[submodule "bund"]
-	path = bund
-	url = https://github.com/Alvarocz/vim-fresh.git
 [submodule "bundle/vim-fresh"]
 	path = bundle/vim-fresh
 	url = https://github.com/Alvarocz/vim-fresh.git
@@ -55,3 +49,6 @@
 [submodule "bundle/vim-obsession"]
 	path = bundle/vim-obsession
 	url = https://github.com/tpope/vim-obsession.git
+[submodule "bundle/Colorizer"]
+	path = bundle/Colorizer
+	url = https://github.com/chrisbra/Colorizer.git
